@@ -321,7 +321,7 @@ class TypeHintSniff extends AbstractSprykerSniff
                     ]);
                     $type = substr($type, 1, -1);
                     $sortName = 'array';
-                } elseif (in_array($type->type->name, static::$sortMap)) {
+                } elseif (in_array($type->type->name, static::$sortMap, true)) {
                     $sortName = $type->type->name;
                 } else {
                     $sortName = 'array';
